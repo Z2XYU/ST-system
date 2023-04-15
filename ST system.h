@@ -19,6 +19,7 @@ enum option
     ADD,
     DEL,
     MODIFY,
+    SORT_grades_sum,
     SORT_Chinese,
     SORT_Math,
     SORT_English,
@@ -29,7 +30,15 @@ enum option
 //打印菜单功能
 void menu(void);
 
-//实现添加学生信息功能
+//声明添加学生信息功能
 void Add(struct student *ps,int size);
-//查看全班成绩
+//声明查看全班成绩的功能
 void show(struct student *ps,int size);
+//声明学生成绩按照语文成绩排序的功能
+void sort_chinese(struct student *ps,int size);
+//声明学生成绩按照数学成绩排序
+void sort_math(struct student *ps,int size);
+//声明学生成绩按照英语成绩排序
+void sort_english(struct student *ps,int size);
+//声明学生成绩按照总成绩排序
+void sort_grades_sum(struct student *ps,int size);

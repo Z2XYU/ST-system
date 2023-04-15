@@ -2,7 +2,8 @@
 #include<stdio.h>
 #include"ST system.h"
 #include<stdlib.h>
-
+#include<windows.h>
+#include<time.h>
 
 int main()
 {
@@ -19,20 +20,33 @@ int main()
         scanf("%d",&input);
         switch (input)
         {
-        case ADD:
-            Add(stu,numeber_MAX);
-            break;
-        case SHOW:
-            show(stu,numeber_MAX);
-            break;
-        case EXIT:
-            exit(0);
-            break;
+            case ADD:
+                Add(stu,numeber_MAX);
+                break;
+            case SHOW:
+                show(stu,numeber_MAX);
+                break;
+            case SORT_grades_sum:
+                sort_grades_sum(stu,numeber_MAX);
+                break;
+            case SORT_Chinese:
+                sort_chinese(stu,numeber_MAX);
+                break;
+            case SORT_Math:
+                sort_math(stu,numeber_MAX);
+                break;
+            case SORT_English:
+                sort_english(stu,numeber_MAX);
+                break;
 
-        default:
-            printf("请输入正确的选项\n");
-            system("pause");
-            break;
+            case EXIT:
+                printf("欢迎下次使用\n");
+                Sleep(500);
+                exit(0);
+            default:
+                printf("请输入正确的选项\n");
+                system("pause");
+                break;
         }
     }
      
