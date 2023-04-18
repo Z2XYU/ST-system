@@ -46,3 +46,5 @@ void sort_grades_sum(struct student *ps, int size);
 void search(struct student *ps, int size);
 // 声明修改学生信息的的功能
 void modify(struct student *ps, int size);
+// 声明删除学生信息的功能
+void Del(struct student *ps, int *p);

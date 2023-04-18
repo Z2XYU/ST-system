@@ -23,6 +23,9 @@ int main()
         case ADD:
             Add(stu, numeber_MAX);
             break;
+        case DEL:
+            Del(stu, &numeber_MAX);
+            break;
         case MODIFY:
             modify(stu, numeber_MAX);
             break;
