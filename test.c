@@ -17,12 +17,14 @@ int main()
         menu();
         printf("请选择你想要使用的功能\n");
         int input;
-        ;
         scanf("%d", &input);
         switch (input)
         {
         case ADD:
             Add(stu, numeber_MAX);
+            break;
+        case MODIFY:
+            modify(stu, numeber_MAX);
             break;
         case SHOW:
             show(stu, numeber_MAX);
@@ -44,7 +46,7 @@ int main()
             break;
         case EXIT:
             printf("欢迎下次使用\n");
-            Sleep(500);
+            Sleep(1000);
             exit(0);
         default:
             printf("请输入正确的选项\n");
