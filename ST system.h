@@ -1,6 +1,9 @@
 // 声明功能
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
+#include <windows.h>
+#include <time.h>
 // 创建学生结构体
 struct student
 {

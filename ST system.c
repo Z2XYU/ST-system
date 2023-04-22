@@ -1,10 +1,6 @@
 // 实现功能
-#include <stdio.h>
 #include "ST system.h"
-#include <stdlib.h>
-#include <string.h>
-#include <windows.h>
-#include <time.h>
+
 
 void menu()
 {

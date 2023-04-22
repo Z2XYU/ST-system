@@ -1,9 +1,5 @@
 // 实现学生成绩的管理查询等功能
-#include <stdio.h>
 #include "ST system.h"
-#include <stdlib.h>
-#include <windows.h>
-#include <time.h>
 
 int main()
 {
