@@ -1,7 +1,6 @@
 // 实现功能
 #include "ST system.h"
 
-
 void menu()
 {
     printf("        欢迎使用学生成绩管理系统    \n");
@@ -176,8 +175,8 @@ void Del(struct student *ps, int *p)
             printf("%s\t%s\t%s\t%.1f\t%.1f\t%.1f\t%.1f\n", ps[i].candidate_num, ps[i].name, ps[i].sex, ps[i].Chinese, ps[i].Math, ps[i].English, ps[i].grades_sum);
             printf("请确认是否删除\n请输入Y/N:");
             char choose;
-            //清空缓冲区
-            setbuf(stdin,NULL);
+            // 清空缓冲区
+            setbuf(stdin, NULL);
             scanf("%c", &choose);
             if (choose == 'Y' || choose == 'y')
             {
@@ -199,5 +198,36 @@ void Del(struct student *ps, int *p)
             printf("没有输入该学生信息,请检查是否输入正确然后再次修改\n");
             Sleep(1000);
         }
+    }
+}
+
+void SaveInformation(student *ps, int size)
+{
+    setbuf(stdin, NULL);
+    char choose;
+    printf("是否保存此次修改\n请输入y或n\n");
+    scanf("%c", &choose);
+    if (choose == 'Y' || choose == 'y')
+    {
+        FILE *pfWrite = fopen("ST_system.txt", "w");
+        if (pfWrite == NULL)
+        {
+            perror("error opening file");
+            return;
+        }
+        fprintf(pfWrite, "考号\t姓名\t性别\t语文\t数学\t英语\t总分\n");
+        for (int i = 0; i < size; i++)
+        {
+            fprintf(pfWrite, "%s\t%s\t%s\t%.1f\t%.1f\t%.1f\t%.1f\n", ps[i].candidate_num, ps[i].name, ps[i].sex, ps[i].Chinese, ps[i].Math, ps[i].English, ps[i].grades_sum);
+        }
+        printf("保存成功\n");
+        Sleep(1000);
+        fclose(pfWrite);
+        pfWrite = NULL;
+    }
+    else
+    {
+        printf("此次修改未保存\n");
+        Sleep(1000);
     }
 }

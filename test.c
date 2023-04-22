@@ -6,7 +6,7 @@ int main()
     printf("请输入本班总人数\n");
     int numeber_MAX;
     scanf("%d", &numeber_MAX);
-    struct student stu[numeber_MAX];
+    struct student information[numeber_MAX];
     while (1)
     {
         system("cls");
@@ -17,33 +17,34 @@ int main()
         switch (input)
         {
         case ADD:
-            Add(stu, numeber_MAX);
+            Add(information, numeber_MAX);
             break;
         case DEL:
-            Del(stu, &numeber_MAX);
+            Del(information, &numeber_MAX);
             break;
         case MODIFY:
-            modify(stu, numeber_MAX);
+            modify(information, numeber_MAX);
             break;
         case SHOW:
-            show(stu, numeber_MAX);
+            show(information, numeber_MAX);
             break;
         case SORT_grades_sum:
-            sort_grades_sum(stu, numeber_MAX);
+            sort_grades_sum(information, numeber_MAX);
             break;
         case SORT_Chinese:
-            sort_chinese(stu, numeber_MAX);
+            sort_chinese(information, numeber_MAX);
             break;
         case SORT_Math:
-            sort_math(stu, numeber_MAX);
+            sort_math(information, numeber_MAX);
             break;
         case SORT_English:
-            sort_english(stu, numeber_MAX);
+            sort_english(information, numeber_MAX);
             break;
         case SEARCH:
-            search(stu, numeber_MAX);
+            search(information, numeber_MAX);
             break;
         case EXIT:
+            SaveInformation(information, numeber_MAX);
             printf("欢迎下次使用\n");
             Sleep(1000);
             exit(0);

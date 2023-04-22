@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <time.h>
 // 创建学生结构体
-struct student
+typedef struct student
 {
     char candidate_num[8];
     char name[32];
@@ -14,7 +14,7 @@ struct student
     float Math;
     float English;
     float grades_sum;
-};
+} student;
 // 创建枚举
 enum option
 {
@@ -51,3 +51,5 @@ void search(struct student *ps, int size);
 void modify(struct student *ps, int size);
 // 声明删除学生信息的功能
 void Del(struct student *ps, int *p);
+// 保存信息
+void SaveInformation(student *ps, int size);
